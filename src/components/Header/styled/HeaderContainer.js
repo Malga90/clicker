@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Header = styled.div`
+const HeaderContainer = styled.div`
   height: 10vh;
   background: #db162f;
   color: #f3e8ee;
@@ -12,4 +12,4 @@ const Header = styled.div`
   text-transform: uppercase;
 `;
 
-export default Header;
+export default HeaderContainer;
