@@ -1,12 +1,10 @@
 import styled from "styled-components";
 
 const DashboardTrainingBag = styled.div`
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
   border-radius: 50%;
-  margin: 200px auto;
-  //   display: flex;
-  //   justify-content: center;
+  margin: 100px auto;
   background: white;
 `;
 
