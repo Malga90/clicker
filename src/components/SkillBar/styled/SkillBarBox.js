@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const SkillBarBox = styled.div`
-  width: 300px;
+  width: 400px;
   height: 50px;
   border: 2px solid white;
   margin-top: 20px;
