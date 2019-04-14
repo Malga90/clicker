@@ -3,6 +3,7 @@ import DashboardContainer from "./styled/DashboardContainer";
 import TrainingBag from "../TrainingBag/TrainingBag";
 import Header from "../Header/Header";
 import SkillBar from "../SkillBar/SkillBar";
+import GymUpgrade from "../GymUpgrade/GymUpgrade";
 
 class Dashboard extends Component {
   constructor(props) {
@@ -36,6 +37,7 @@ class Dashboard extends Component {
         <Header level={this.state.level} />
         <SkillBar skill={this.state.skill} />
         <TrainingBag onClick={this.skillIncrement} />
+        <GymUpgrade />
       </DashboardContainer>
     );
   }
