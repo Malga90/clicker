@@ -10,7 +10,8 @@ class Dashboard extends Component {
     super(props);
     this.state = {
       level: 1,
-      skill: 95
+      skill: 95,
+      coins: 0
     };
   }
 
@@ -36,8 +37,8 @@ class Dashboard extends Component {
       <DashboardContainer>
         <Header level={this.state.level} />
         <SkillBar skill={this.state.skill} />
-        <TrainingBag onClick={this.skillIncrement} />
-        <GymUpgrade />
+        <TrainingBag skillIncrement={this.skillIncrement} />
+        <GymUpgrade coins={this.state.coins} />
       </DashboardContainer>
     );
   }

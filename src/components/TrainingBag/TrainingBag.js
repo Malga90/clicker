@@ -3,7 +3,7 @@ import TrainingBagContainer from "./styled/TrainingBagContainer";
 
 class Dashboard extends Component {
   render() {
-    return <TrainingBagContainer />;
+    return <TrainingBagContainer onClick={this.props.skillIncrement} />;
   }
 }
 

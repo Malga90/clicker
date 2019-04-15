@@ -6,6 +6,7 @@ const DashboardContainer = styled.ul`
   color: red;
   font-weight: 700;
   padding: 0;
+  margin: 15% 0;
 `;
 
 export default DashboardContainer;

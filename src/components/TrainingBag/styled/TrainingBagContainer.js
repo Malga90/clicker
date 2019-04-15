@@ -6,6 +6,10 @@ const TrainingBagContainer = styled.div`
   align-self: center;
   border-radius: 50%;
   background: purple;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  margin: 0 auto;
 `;
 
 export default TrainingBagContainer;

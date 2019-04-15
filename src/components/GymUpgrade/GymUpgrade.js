@@ -7,7 +7,8 @@ class Dashboard extends Component {
   render() {
     return (
       <GymUpgradeContainer>
-        <GymUpgradeCoins>cooooins here, bitch</GymUpgradeCoins>
+        Money Money Money: {this.props.coins}
+        <GymUpgradeCoins />
         <GymUpgradeButton>Gym upgrade</GymUpgradeButton>
       </GymUpgradeContainer>
     );

@@ -10,7 +10,9 @@ const GymUpgradeButton = styled.button`
   border: 2px solid purple;
   border-radius: 5px;
   font-weight: bold;
-  vertical-align: middle;
+  letter-spacing: 2px;
+  margin-top: 30%;
+  outline: none;
 `;
 
 export default GymUpgradeButton;
