@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 const TrainingBagContainer = styled.div`
-  height: 300px;
-  width: 300px;
+  height: 400px;
+  width: 400px;
+  align-self: center;
   border-radius: 50%;
-  background: teal;
+  background: purple;
 `;
 
 export default TrainingBagContainer;
