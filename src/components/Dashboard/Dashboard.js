@@ -10,7 +10,7 @@ class Dashboard extends Component {
     super(props);
     this.state = {
       level: 1,
-      skill: 95,
+      skill: 0,
       coins: 0
     };
   }
