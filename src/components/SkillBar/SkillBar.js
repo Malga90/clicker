@@ -17,7 +17,7 @@ class Dashboard extends Component {
             <SkillsListElement>Endurance</SkillsListElement>
             <SkillsListElement>Strength</SkillsListElement>
             <SkillsListElement>Technique</SkillsListElement>
-            <SkillsListElement>Condition</SkillsListElement>
+            <SkillsListElement>Agility</SkillsListElement>
           </SkillsList>
         </SkillBarSkills>
       </SkillBarContainer>

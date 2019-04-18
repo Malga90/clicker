@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import GymUpgradeContainer from "./styled/GymUpgradeContainer";
 import GymUpgradeCoins from "./styled/GymUpgradeCoins";
 import GymUpgradeButton from "./styled/GymUpgradeButton";
-import GymUpgradeAuto from "./styled/GymUpgradeAuto";
-import GymUpgradeSpeed from "./styled/GymUpgradeSpeed";
-import GymUpgradeInc from "./styled/GymUpgradeInc";
+import GymUpgradeOption from "./styled/GymUpgradeOption";
 
 class Dashboard extends Component {
   render() {
@@ -12,9 +10,9 @@ class Dashboard extends Component {
       <GymUpgradeContainer>
         Money Money Money: {this.props.coins}
         <GymUpgradeCoins />
-        <GymUpgradeAuto>Automatic Clicker</GymUpgradeAuto>
-        <GymUpgradeSpeed>Speed up by 10%</GymUpgradeSpeed>
-        <GymUpgradeInc>Increase skill increment</GymUpgradeInc>
+        <GymUpgradeOption>Automatic Clicker</GymUpgradeOption>
+        <GymUpgradeOption>Speed up by 10%</GymUpgradeOption>
+        <GymUpgradeOption>Increase skill increment</GymUpgradeOption>
         <GymUpgradeButton>Gym upgrade</GymUpgradeButton>
       </GymUpgradeContainer>
     );

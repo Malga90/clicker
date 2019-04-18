@@ -8,6 +8,7 @@ const GymUpgradeCoins = styled.div`
   color: white;
   font-size: 25px;
   margin-top: 20px;
+  margin-bottom: 20%;
 `;
 
 export default GymUpgradeCoins;
