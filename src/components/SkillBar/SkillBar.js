@@ -5,6 +5,7 @@ import SkillBarProgress from "./styled/SkillBarProgress";
 import SkillBarSkills from "./styled/SkillBarSkills";
 import SkillsList from "./styled/SkillsList";
 import SkillsListElement from "./styled/SkillsListElement";
+import SkillsPoints from "./styled/SkillsPoints";
 
 class SkillBar extends Component {
   render() {
@@ -14,6 +15,7 @@ class SkillBar extends Component {
         <SkillBarBox>
           <SkillBarProgress skill={this.props.skill} />
         </SkillBarBox>
+        <SkillsPoints>Points: {this.props.point}</SkillsPoints>
         <SkillBarSkills>
           <SkillsList>
             Skills:

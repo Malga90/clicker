@@ -10,8 +10,9 @@ class Dashboard extends Component {
     super(props);
     this.state = {
       level: 1,
-      skill: 0,
-      coins: 0
+      skill: 95,
+      coins: 0,
+      point: 0
     };
   }
 
@@ -23,20 +24,38 @@ class Dashboard extends Component {
     }
   };
 
+  pointIncrement = () => {
+    if (this.state.skill === 100) {
+      this.setState({
+        point: this.state.point + 1
+      });
+    }
+    this.resetProgress();
+  };
+
   skillIncrement = () => {
     this.setState(
       {
         skill: this.state.skill + 1
       },
-      this.levelIncrement
+      // this.levelIncrement,
+      this.pointIncrement
     );
+  };
+
+  resetProgress = () => {
+    if (this.state.skill === 100) {
+      this.setState({
+        skill: 0
+      });
+    }
   };
 
   render() {
     return (
       <DashboardContainer>
         <Header level={this.state.level} />
-        <SkillBar skill={this.state.skill} />
+        <SkillBar skill={this.state.skill} point={this.state.point} />
         <TrainingBag skillIncrement={this.skillIncrement} />
         <GymUpgrade coins={this.state.coins} />
       </DashboardContainer>
