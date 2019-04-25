@@ -6,13 +6,13 @@ import SkillBarSkills from "./styled/SkillBarSkills";
 import SkillsList from "./styled/SkillsList";
 import SkillsListElement from "./styled/SkillsListElement";
 
-class Dashboard extends Component {
+class SkillBar extends Component {
   render() {
     return (
       <SkillBarContainer>
         Skill Progress: {this.props.skill}
         <SkillBarBox>
-          <SkillBarProgress />
+          <SkillBarProgress skill={this.props.skill} />
         </SkillBarBox>
         <SkillBarSkills>
           <SkillsList>
@@ -28,4 +28,4 @@ class Dashboard extends Component {
   }
 }
 
-export default Dashboard;
+export default SkillBar;
