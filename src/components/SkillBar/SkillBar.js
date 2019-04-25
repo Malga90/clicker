@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import SkillBarContainer from "./styled/SkillBarContainer";
 import SkillBarBox from "./styled/SkillBarBox";
+import SkillBarProgress from "./styled/SkillBarProgress";
 import SkillBarSkills from "./styled/SkillBarSkills";
 import SkillsList from "./styled/SkillsList";
 import SkillsListElement from "./styled/SkillsListElement";
@@ -10,7 +11,9 @@ class Dashboard extends Component {
     return (
       <SkillBarContainer>
         Skill Progress: {this.props.skill}
-        <SkillBarBox />
+        <SkillBarBox>
+          <SkillBarProgress />
+        </SkillBarBox>
         <SkillBarSkills>
           <SkillsList>
             Skills:
