@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const DashboardContainer = styled.li`
+const SkillsListElement = styled.li`
   color: white;
   margin-bottom: 25%;
   border-bottom: 2px solid white;
@@ -8,6 +8,10 @@ const DashboardContainer = styled.li`
   &:first-child {
     margin-top: 30px;
   }
+
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 `;
 
-export default DashboardContainer;
+export default SkillsListElement;

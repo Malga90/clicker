@@ -6,6 +6,7 @@ import SkillBarSkills from "./styled/SkillBarSkills";
 import SkillsList from "./styled/SkillsList";
 import SkillsListElement from "./styled/SkillsListElement";
 import SkillsPoints from "./styled/SkillsPoints";
+import SkillStrengthPoints from "./styled/SkillStrengthPoints";
 
 class SkillBar extends Component {
   render() {
@@ -19,8 +20,11 @@ class SkillBar extends Component {
         <SkillBarSkills>
           <SkillsList>
             Skills:
+            <SkillsListElement>
+              Strength
+              <SkillStrengthPoints>1</SkillStrengthPoints>
+            </SkillsListElement>
             <SkillsListElement>Endurance</SkillsListElement>
-            <SkillsListElement>Strength</SkillsListElement>
             <SkillsListElement>Technique</SkillsListElement>
             <SkillsListElement>Agility</SkillsListElement>
           </SkillsList>
