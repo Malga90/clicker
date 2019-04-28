@@ -12,7 +12,8 @@ class Dashboard extends Component {
       level: 1,
       skill: 95,
       coins: 0,
-      point: 0
+      point: 0,
+      strength: 1
     };
   }
 
@@ -51,11 +52,20 @@ class Dashboard extends Component {
     }
   };
 
+  getStrength = () => {
+    console.log("gettin some!");
+  };
+
   render() {
     return (
       <DashboardContainer>
         <Header level={this.state.level} />
-        <SkillBar skill={this.state.skill} point={this.state.point} />
+        <SkillBar
+          skill={this.state.skill}
+          point={this.state.point}
+          strength={this.state.strength}
+          getStrength={this.getStrength}
+        />
         <TrainingBag skillIncrement={this.skillIncrement} />
         <GymUpgrade coins={this.state.coins} />
       </DashboardContainer>

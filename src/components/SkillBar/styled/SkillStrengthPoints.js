@@ -9,6 +9,12 @@ const SkillStrengthPoints = styled.button`
   padding: 2%;
   background: purple;
   outline: none;
+
+  &:hover {
+    color: purple;
+    background: white;
+    border: 2px solid white;
+  }
 `;
 
 export default SkillStrengthPoints;
