@@ -21,7 +21,7 @@ class SkillBar extends Component {
           <SkillsList>
             Skills:
             <SkillsListElement>
-              Strength
+              Strength: {this.props.strengthCounter}
               <SkillStrengthPoints onClick={this.props.getStrength}>
                 {this.props.strength}
               </SkillStrengthPoints>

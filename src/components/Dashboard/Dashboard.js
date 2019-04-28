@@ -12,8 +12,9 @@ class Dashboard extends Component {
       level: 1,
       skill: 95,
       coins: 0,
-      point: 0,
-      strength: 1
+      point: 30,
+      strength: 1,
+      strengthCounter: 1
     };
   }
 
@@ -53,7 +54,13 @@ class Dashboard extends Component {
   };
 
   getStrength = () => {
-    console.log("gettin some!");
+    if (this.state.point >= this.state.strength) {
+      this.setState({
+        strengthCounter: this.state.strengthCounter + 1,
+        point: this.state.point - this.state.strength,
+        strength: this.state.strength * 2
+      });
+    }
   };
 
   render() {
@@ -65,6 +72,7 @@ class Dashboard extends Component {
           point={this.state.point}
           strength={this.state.strength}
           getStrength={this.getStrength}
+          strengthCounter={this.state.strengthCounter}
         />
         <TrainingBag skillIncrement={this.skillIncrement} />
         <GymUpgrade coins={this.state.coins} />
