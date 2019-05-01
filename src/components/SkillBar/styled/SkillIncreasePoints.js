@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const SkillStrengthPoints = styled.button`
+const SkillIncreasePoints = styled.button`
   color: white;
   font-size: 25px;
   border: 2px solid purple;
@@ -17,4 +17,4 @@ const SkillStrengthPoints = styled.button`
   }
 `;
 
-export default SkillStrengthPoints;
+export default SkillIncreasePoints;

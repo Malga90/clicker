@@ -6,7 +6,7 @@ import SkillBarSkills from "./styled/SkillBarSkills";
 import SkillsList from "./styled/SkillsList";
 import SkillsListElement from "./styled/SkillsListElement";
 import SkillsPoints from "./styled/SkillsPoints";
-import SkillStrengthPoints from "./styled/SkillStrengthPoints";
+import SkillIncreasePoints from "./styled/SkillIncreasePoints";
 
 class SkillBar extends Component {
   render() {
@@ -22,18 +22,28 @@ class SkillBar extends Component {
             Skills:
             <SkillsListElement>
               Strength: {this.props.strengthCounter}
-              <SkillStrengthPoints onClick={this.props.increaseStrength}>
+              <SkillIncreasePoints onClick={this.props.increaseStrength}>
                 {this.props.strength1}
-              </SkillStrengthPoints>
+              </SkillIncreasePoints>
             </SkillsListElement>
             <SkillsListElement>
               Endurance: {this.props.enduranceCounter}
-              <SkillStrengthPoints onClick={this.props.increaseEndurance}>
+              <SkillIncreasePoints onClick={this.props.increaseEndurance}>
                 {this.props.endurance1}
-              </SkillStrengthPoints>
+              </SkillIncreasePoints>
             </SkillsListElement>
-            <SkillsListElement>Technique</SkillsListElement>
-            <SkillsListElement>Agility</SkillsListElement>
+            <SkillsListElement>
+              Technique: {this.props.techniqueCounter}
+              <SkillIncreasePoints onClick={this.props.increaseTechnique}>
+                {this.props.technique1}
+              </SkillIncreasePoints>
+            </SkillsListElement>
+            <SkillsListElement>
+              Agility: {this.props.agilityCounter}
+              <SkillIncreasePoints onClick={this.props.increaseAgility}>
+                {this.props.agility1}
+              </SkillIncreasePoints>
+            </SkillsListElement>
           </SkillsList>
         </SkillBarSkills>
       </SkillBarContainer>
