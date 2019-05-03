@@ -12,36 +12,36 @@ class SkillBar extends Component {
   render() {
     return (
       <SkillBarContainer>
-        Skill Progress: {this.props.skill}
+        Skill Progress: {this.props.skillBarProgress}
         <SkillBarBox>
-          <SkillBarProgress skill={this.props.skill} />
+          <SkillBarProgress skillBarProgress={this.props.skillBarProgress} />
         </SkillBarBox>
-        <SkillsPoints>Points: {this.props.point}</SkillsPoints>
+        <SkillsPoints>Points: {this.props.skillPoint}</SkillsPoints>
         <SkillBarSkills>
           <SkillsList>
             Skills:
             <SkillsListElement>
               Strength: {this.props.strengthCounter}
               <SkillIncreasePoints onClick={this.props.increaseStrength}>
-                {this.props.strength1}
+                {this.props.strengthCurrent}
               </SkillIncreasePoints>
             </SkillsListElement>
             <SkillsListElement>
               Endurance: {this.props.enduranceCounter}
               <SkillIncreasePoints onClick={this.props.increaseEndurance}>
-                {this.props.endurance1}
+                {this.props.enduranceCurrent}
               </SkillIncreasePoints>
             </SkillsListElement>
             <SkillsListElement>
               Technique: {this.props.techniqueCounter}
               <SkillIncreasePoints onClick={this.props.increaseTechnique}>
-                {this.props.technique1}
+                {this.props.techniqueCurrent}
               </SkillIncreasePoints>
             </SkillsListElement>
             <SkillsListElement>
               Agility: {this.props.agilityCounter}
               <SkillIncreasePoints onClick={this.props.increaseAgility}>
-                {this.props.agility1}
+                {this.props.agilityCurrent}
               </SkillIncreasePoints>
             </SkillsListElement>
           </SkillsList>

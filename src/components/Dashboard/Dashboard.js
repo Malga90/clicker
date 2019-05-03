@@ -10,28 +10,32 @@ class Dashboard extends Component {
     super(props);
     this.state = {
       level: 1,
-      skill: 95,
+      skillBarProgress: 95,
       coins: 100,
-      point: 500,
+      skillPoint: 500,
+
       strengthCounter: 1,
-      strength1: 1,
-      strength2: 0,
+      strengthCurrent: 1,
+      strengthPrevious: 0,
+
       enduranceCounter: 1,
-      endurance1: 1,
-      endurance2: 0,
+      enduranceCurrent: 1,
+      endurancePrevious: 0,
+
       techniqueCounter: 1,
-      technique1: 1,
-      technique2: 0,
+      techniqueCurrent: 1,
+      techniquePrevious: 0,
+
       agilityCounter: 1,
-      agility1: 1,
-      agility2: 0
+      agilityCurrent: 1,
+      agilityPrevious: 0
     };
   }
 
   pointIncrement = () => {
-    if (this.state.skill === 100) {
+    if (this.state.skillBarProgress === 100) {
       this.setState({
-        point: this.state.point + 1
+        skillPoint: this.state.skillPoint + 1
       });
     }
     this.resetProgress();
@@ -40,64 +44,64 @@ class Dashboard extends Component {
   skillIncrement = () => {
     this.setState(
       {
-        skill: this.state.skill + 1
+        skillBarProgress: this.state.skillBarProgress + 1
       },
       this.pointIncrement
     );
   };
 
   resetProgress = () => {
-    if (this.state.skill === 100) {
+    if (this.state.skillBarProgress === 100) {
       this.setState({
-        skill: 0
+        skillBarProgress: 0
       });
     }
   };
 
   increaseStrength = e => {
-    let a = this.state.strength1 + this.state.strength2;
-    if (this.state.point >= this.state.strength1) {
+    let fibonacci = this.state.strengthCurrent + this.state.strengthPrevious;
+    if (this.state.skillPoint >= this.state.strengthCurrent) {
       this.setState({
         strengthCounter: this.state.strengthCounter + 1,
-        point: this.state.point - this.state.strength1,
-        strength1: a,
-        strength2: this.state.strength1
+        skillPoint: this.state.skillPoint - this.state.strengthCurrent,
+        strengthCurrent: fibonacci,
+        strengthPrevious: this.state.strengthCurrent
       });
     }
   };
 
   increaseEndurance = e => {
-    let a = this.state.endurance1 + this.state.endurance2;
-    if (this.state.point >= this.state.endurance1) {
+    let fibonacci = this.state.enduranceCurrent + this.state.endurancePrevious;
+    if (this.state.skillPoint >= this.state.enduranceCurrent) {
       this.setState({
         enduranceCounter: this.state.enduranceCounter + 1,
-        point: this.state.point - this.state.endurance1,
-        endurance1: a,
-        endurance2: this.state.endurance1
+        skillPoint: this.state.skillPoint - this.state.enduranceCurrent,
+        enduranceCurrent: fibonacci,
+        endurancePrevious: this.state.enduranceCurrent
       });
     }
   };
 
   increaseTechnique = e => {
-    let a = this.state.technique1 + this.state.technique2;
-    if (this.state.point >= this.state.technique1) {
+    let fibonacci = this.state.techniqueCurrent + this.state.techniquePrevious;
+    if (this.state.skillPoint >= this.state.techniqueCurrent) {
       this.setState({
         techniqueCounter: this.state.techniqueCounter + 1,
-        point: this.state.point - this.state.technique1,
-        technique1: a,
-        technique2: this.state.technique1
+        skillPoint: this.state.skillPoint - this.state.techniqueCurrent,
+        techniqueCurrent: fibonacci,
+        techniquePrevious: this.state.techniqueCurrent
       });
     }
   };
 
   increaseAgility = e => {
-    let a = this.state.agility1 + this.state.agility2;
-    if (this.state.point >= this.state.agility1) {
+    let fibonacci = this.state.agilityCurrent + this.state.agilityPrevious;
+    if (this.state.skillPoint >= this.state.agilityCurrent) {
       this.setState({
         agilityCounter: this.state.agilityCounter + 1,
-        point: this.state.point - this.state.agility1,
-        agility1: a,
-        agility2: this.state.agility1
+        skillPoint: this.state.skillPoint - this.state.agilityCurrent,
+        agilityCurrent: fibonacci,
+        agilityPrevious: this.state.agilityCurrent
       });
     }
   };
@@ -107,12 +111,12 @@ class Dashboard extends Component {
       <DashboardContainer>
         <Header level={this.state.level} />
         <SkillBar
-          skill={this.state.skill}
-          point={this.state.point}
-          strength1={this.state.strength1}
-          endurance1={this.state.endurance1}
-          technique1={this.state.technique1}
-          agility1={this.state.agility1}
+          skillBarProgress={this.state.skillBarProgress}
+          skillPoint={this.state.skillPoint}
+          strengthCurrent={this.state.strengthCurrent}
+          enduranceCurrent={this.state.enduranceCurrent}
+          techniqueCurrent={this.state.techniqueCurrent}
+          agilityCurrent={this.state.agilityCurrent}
           increaseStrength={this.increaseStrength}
           increaseEndurance={this.increaseEndurance}
           increaseTechnique={this.increaseTechnique}
