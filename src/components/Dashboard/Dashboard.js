@@ -3,7 +3,6 @@ import DashboardContainer from "./styled/DashboardContainer";
 import TrainingBag from "../TrainingBag/TrainingBag";
 import Header from "../Header/Header";
 import SkillBar from "../SkillBar/SkillBar";
-import GymUpgrade from "../GymUpgrade/GymUpgrade";
 
 class Dashboard extends Component {
   constructor(props) {
@@ -12,7 +11,7 @@ class Dashboard extends Component {
       level: 1,
       skillBarProgress: 95,
       coins: 100,
-      skillPoint: 500,
+      skillPoint: 600,
 
       strengthCounter: 1,
       strengthCurrent: 1,
@@ -127,7 +126,6 @@ class Dashboard extends Component {
           agilityCounter={this.state.agilityCounter}
         />
         <TrainingBag skillIncrement={this.skillIncrement} />
-        <GymUpgrade coins={this.state.coins} />
       </DashboardContainer>
     );
   }
