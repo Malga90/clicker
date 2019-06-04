@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import DashboardContainer from "./styled/DashboardContainer";
-import TrainingBag from "../TrainingBag/TrainingBag";
+import IncrementWand from "../IncrementWand/IncrementWand";
 import Header from "../Header/Header";
 import SkillBar from "../SkillBar/SkillBar";
 
@@ -125,7 +125,7 @@ class Dashboard extends Component {
           techniqueCounter={this.state.techniqueCounter}
           agilityCounter={this.state.agilityCounter}
         />
-        <TrainingBag skillIncrement={this.skillIncrement} />
+        <IncrementWand skillIncrement={this.skillIncrement} />
       </DashboardContainer>
     );
   }
