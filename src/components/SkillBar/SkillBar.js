@@ -3,9 +3,9 @@ import SkillBarContainer from "./styled/SkillBarContainer";
 import SkillBarBox from "./styled/SkillBarBox";
 import SkillBarProgress from "./styled/SkillBarProgress";
 import SkillBarSkills from "./styled/SkillBarSkills";
-import SkillsList from "./styled/SkillsList";
+import BoostsList from "./styled/BoostsList";
 import SkillsListElement from "./styled/SkillsListElement";
-import SkillsPoints from "./styled/SkillsPoints";
+import PatronusPoints from "./styled/PatronusPoints";
 import SkillIncreasePoints from "./styled/SkillIncreasePoints";
 
 class SkillBar extends Component {
@@ -16,35 +16,35 @@ class SkillBar extends Component {
         <SkillBarBox>
           <SkillBarProgress skillBarProgress={this.props.skillBarProgress} />
         </SkillBarBox>
-        <SkillsPoints>Points: {this.props.skillPoint}</SkillsPoints>
+        <PatronusPoints>Patronus: {this.props.patronusPoint}</PatronusPoints>
         <SkillBarSkills>
-          <SkillsList>
-            Skills:
+          <BoostsList>
+            Boosts:
             <SkillsListElement>
-              Strength: {this.props.strengthCounter}
+              Gryffindor's sword: {this.props.strengthCounter}
               <SkillIncreasePoints onClick={this.props.increaseStrength}>
                 {this.props.strengthCurrent}
               </SkillIncreasePoints>
             </SkillsListElement>
             <SkillsListElement>
-              Endurance: {this.props.enduranceCounter}
+              Fawkes: {this.props.enduranceCounter}
               <SkillIncreasePoints onClick={this.props.increaseEndurance}>
                 {this.props.enduranceCurrent}
               </SkillIncreasePoints>
             </SkillsListElement>
             <SkillsListElement>
-              Technique: {this.props.techniqueCounter}
+              Deathly Hallows: {this.props.techniqueCounter}
               <SkillIncreasePoints onClick={this.props.increaseTechnique}>
                 {this.props.techniqueCurrent}
               </SkillIncreasePoints>
             </SkillsListElement>
             <SkillsListElement>
-              Agility: {this.props.agilityCounter}
+              Dumledore: {this.props.agilityCounter}
               <SkillIncreasePoints onClick={this.props.increaseAgility}>
                 {this.props.agilityCurrent}
               </SkillIncreasePoints>
             </SkillsListElement>
-          </SkillsList>
+          </BoostsList>
         </SkillBarSkills>
       </SkillBarContainer>
     );
