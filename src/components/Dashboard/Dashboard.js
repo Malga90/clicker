@@ -61,7 +61,7 @@ class Dashboard extends Component {
     if (this.state.patronusPoint >= this.state.strengthCurrent) {
       this.setState({
         strengthCounter: this.state.strengthCounter + 1,
-        skillPoint: this.state.patronusPoint - this.state.strengthCurrent,
+        patronusPoint: this.state.patronusPoint - this.state.strengthCurrent,
         strengthCurrent: fibonacci,
         strengthPrevious: this.state.strengthCurrent
       });
@@ -73,7 +73,7 @@ class Dashboard extends Component {
     if (this.state.patronusPoint >= this.state.enduranceCurrent) {
       this.setState({
         enduranceCounter: this.state.enduranceCounter + 1,
-        skillPoint: this.state.patronusPoint - this.state.enduranceCurrent,
+        patronusPoint: this.state.patronusPoint - this.state.enduranceCurrent,
         enduranceCurrent: fibonacci,
         endurancePrevious: this.state.enduranceCurrent
       });
@@ -85,7 +85,7 @@ class Dashboard extends Component {
     if (this.state.patronusPoint >= this.state.techniqueCurrent) {
       this.setState({
         techniqueCounter: this.state.techniqueCounter + 1,
-        skillPoint: this.state.patronusPoint - this.state.techniqueCurrent,
+        patronusPoint: this.state.patronusPoint - this.state.techniqueCurrent,
         techniqueCurrent: fibonacci,
         techniquePrevious: this.state.techniqueCurrent
       });
@@ -97,7 +97,7 @@ class Dashboard extends Component {
     if (this.state.patronusPoint >= this.state.agilityCurrent) {
       this.setState({
         agilityCounter: this.state.agilityCounter + 1,
-        skillPoint: this.state.patronusPoint - this.state.agilityCurrent,
+        patronusPoint: this.state.patronusPoint - this.state.agilityCurrent,
         agilityCurrent: fibonacci,
         agilityPrevious: this.state.agilityCurrent
       });
